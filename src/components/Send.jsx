@@ -1,6 +1,7 @@
 import React from 'react'
+import Counter from '../counter'
 
-const Send = (props) => {
+const Send = () => {
     return (
         <div>
             <div class="row">
@@ -18,7 +19,8 @@ const Send = (props) => {
                     <p>Max</p>
                 </div>
                 <div class="col-8 d-flex justify-content-center">
-                    <h1 class="blue main mt-2">$0</h1>
+                    <Counter />
+                    <h1 class="blue main mt-2" id="input">$0</h1>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                     <img class="icon2" src="./assets/swap-arrows.png" alt="Swap" />
@@ -26,7 +28,7 @@ const Send = (props) => {
             </div>
             <div class="row">
                 <div class="col d-flex justify-content-center">
-                    <p class="mx-3">0.00000 SHIB</p>
+                    <p class="mx-3" >0.00000 SHIB</p>
                 </div>
             </div>
             <hr class="mt-5" />
@@ -55,7 +57,7 @@ const Send = (props) => {
             <div class="row mt-3"></div>
             <div class="row my-5">
                 <div class="col d-flex justify-content-center align-items-center">
-                    <h4>1</h4>
+                    <button><h4>1</h4></button>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                     <h4>2</h4>

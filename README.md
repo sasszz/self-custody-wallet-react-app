@@ -1,6 +1,8 @@
 # Self Custody Wallet React App
 <img src="./README-imgs/banner-wallet.png" alt="banner">
 
+### Inspired by the design of Coinbase Wallet. This self-custody wallet will be connected to a Smart Contract for a single Ethereum token where users can send, receive and view their cryptocurrency transaction history.
+
 ## Roadmap
 
 - [x] Design mock-up in Figma

@@ -1,5 +1,6 @@
 import React from 'react'
-import Counter from '../counter'
+import Counter from './Counter'
+import CounterButton from './CounterButton'
 
 const Send = () => {
     return (
@@ -20,7 +21,7 @@ const Send = () => {
                 </div>
                 <div class="col-8 d-flex justify-content-center">
                     <Counter />
-                    <h1 class="blue main mt-2" id="input">$0</h1>
+                    {/* <h1 class="blue main mt-2" id="input">$0</h1> */}
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                     <img class="icon2" src="./assets/swap-arrows.png" alt="Swap" />
@@ -57,7 +58,8 @@ const Send = () => {
             <div class="row mt-3"></div>
             <div class="row my-5">
                 <div class="col d-flex justify-content-center align-items-center">
-                    <button><h4>1</h4></button>
+                    <CounterButton />
+                    <h4>1</h4>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                     <h4>2</h4>

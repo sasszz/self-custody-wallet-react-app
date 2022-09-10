@@ -1,0 +1,65 @@
+.body, html {
+    background-color: #1652f0;
+}
+
+.contain {
+    margin: 0 auto;
+    max-width: 600px;
+    min-height: 1232px;
+    color: white;
+    background-color: rgb(28, 27, 27);
+    min-height: 1232px;
+    border: 1px solid white;
+}
+
+.circle {
+    color: black;
+    border-radius: 50%;
+    background-color: #1652f0;
+    height: 30px;
+    width: 30px;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.icon2 {
+    height: 20px;
+    width: 20px;
+}
+
+.icon3 {
+    height: 30px;
+    width: 30px;
+}
+
+.blue {
+    color: #1652f0;
+}
+
+.gray {
+    color: gray;
+}
+
+.main {
+    font-size: 4rem;
+}
+
+.continue {
+    border-radius: 30px;
+    background-color: #1652f0;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}

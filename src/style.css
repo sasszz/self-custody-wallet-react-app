@@ -63,3 +63,10 @@
 a:hover {
     color: black;
 }
+
+.numpad {
+    background-color: rgb(28, 27, 27);
+    color: white;
+    border: none;
+    font-size: 2rem;
+}

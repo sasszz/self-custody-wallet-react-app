@@ -10,6 +10,8 @@ Inspired by the design of Coinbase Wallet. This self-custody wallet will be conn
   - Figma Document: https://tinyurl.com/3y32v9t4
 - [x] Build HTML and CSS templates for each page
 - [x] Convert to React app front-end
+- [x] Build numpad functionality
+  - See Numpad demo below with side-by-side of Coinbase Wallet
 - [ ] Build out backend and database
 - [ ] Connect to a Smart Contract
 - [ ] Deployment
@@ -17,6 +19,10 @@ Inspired by the design of Coinbase Wallet. This self-custody wallet will be conn
 ### React App Front-End Demo
 
 <img src="./README-imgs/react.gif" alt="demo">
+
+### Numpad demo below with side-by-side of Coinbase Wallet
+
+<img src="./README-imgs/numpad-demo.gif" alt="Numpad Demo">
 
 ## Screenshots of Each Page
 

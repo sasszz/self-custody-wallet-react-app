@@ -4,11 +4,10 @@
 
 .contain {
     margin: 0 auto;
-    max-width: 600px;
-    min-height: 1232px;
+    max-width: 500px;
+    min-height: 900px;
     color: white;
     background-color: rgb(28, 27, 27);
-    min-height: 1232px;
     border: 1px solid white;
 }
 
@@ -55,11 +54,47 @@
     border: none;
 }
 
+.new {
+    border-radius: 30px;
+    background-color: #1652f0;
+    color: black;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.already {
+    border-radius: 30px;
+    background-color: #3a3a3b;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.logout {
+    border-radius: 30px;
+    background-color: rgb(28, 27, 27);
+    color: red;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.logout-link {
+    color: red;
+    text-decoration: none;
+}
+
 .link {
     color: black;
     text-decoration: none;
 }
 
+.link2 {
+    color: white;
+    text-decoration: none;
+}
+
+
 a:hover {
     color: black;
 }
+

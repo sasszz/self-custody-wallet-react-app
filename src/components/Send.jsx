@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Send = (props) => {
     return (
         <div>
             <div class="row">
                 <div class="col-1">
-                    <a href="/"><img class="icon2" src="./assets/back-arrow.png" alt="Back Arrow" /></a>
+                    <Link className="link" to={'/home'}><img class="icon2" src="./public/assets/back-arrow.png" alt="Back Arrow" /></Link>
                 </div>
                 <div class="col d-flex justify-content-center">
                     <h6>Send SHIBA INU</h6>
@@ -13,7 +14,7 @@ const Send = (props) => {
                 <div class="col-1">
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-2">
                 <div class="col d-flex justify-content-center align-items-center">
                     <p>Max</p>
                 </div>

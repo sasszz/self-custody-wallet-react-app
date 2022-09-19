@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Receive = () => {
     return (
@@ -6,7 +7,7 @@ const Receive = () => {
         <div>
             <div class="row">
                 <div class="col-1">
-                    <a href="/"><img class="icon2" src="./assets/back-arrow.png" alt="Back Arrow" /></a>
+                    <Link className="link" to={'/home'}><img class="icon2" src="./public/assets/back-arrow.png" alt="Back Arrow" /></Link>
                 </div>
                 <div class="col d-flex justify-content-center">
                     <h6>Receive SHIBA INU</h6>

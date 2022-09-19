@@ -8,7 +8,7 @@ const Home = () => {
                 <h6>0x...a540e22</h6>
                 <h1>$94.37</h1>
             </div>
-            <div className="row w-50 mt-5">
+            <div className="row w-75 mt-5">
                 <div className="col d-flex justify-content-center">
                     <div className="circle d-flex justify-content-center align-items-center">
                         <Link to={'/send'}><img className="icon2" src="./assets/up-arrow.png" alt="Send" /></Link>
@@ -24,8 +24,13 @@ const Home = () => {
                         <Link to="/history" className="link"><p className="link">...</p></Link>
                     </div>
                 </div>
+                <div className="col d-flex justify-content-center">
+                    <div className="circle d-flex justify-content-center">
+                        <Link to="/logout" className="link"><p className="link">x</p></Link>
+                    </div>
+                </div>
             </div>
-            <div className="row w-50 mt-1">
+            <div className="row w-75 mt-1">
                 <div className="col d-flex justify-content-center">
                     <p>Send</p>
                 </div>
@@ -34,6 +39,9 @@ const Home = () => {
                 </div>
                 <div className="col d-flex justify-content-center">
                     <p>History</p>
+                </div>
+                <div className="col d-flex justify-content-center">
+                    <p>Logout</p>
                 </div>
             </div>
             <hr />

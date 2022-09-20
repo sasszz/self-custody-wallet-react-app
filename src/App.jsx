@@ -8,7 +8,7 @@ import History from './components/History'
 import LandingPage from './components/LandingPage';
 import NewWallet from './components/NewWallet';
 import ExistingWallet from './components/ExistingWallet';
-import CreatePassword from './components/CreatePassword';
+// import CreatePassword from './components/CreatePassword';
 import LogOut from './components/LogOut';
 
 import './style.css'
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/existing/wallet" element={<ExistingWallet />}/>
           <Route path="/new/wallet" element={<NewWallet />}/>
-          <Route path="/create/password" element={<CreatePassword />}/>
+          {/* <Route path="/create/password" element={<CreatePassword />}/> */}
           <Route path="/home" element={<Home />} />
           <Route path="/receive" element={<Receive />} />
           <Route path="/send" element={<Send />} />

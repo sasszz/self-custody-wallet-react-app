@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 const LogOut = () => {
     return (
         <div>
+            <div class="col-1">
+                <Link className="link" to={'/home'}><img class="icon2" src="./public/assets/back-arrow.png" alt="Back Arrow" /></Link>
+            </div>
             <div>
                 <h2>Are you sure?</h2>
                 <p> After you sign out, you’ll need to enter your 12 word recovery phrase if you want to use your wallet again. </p>

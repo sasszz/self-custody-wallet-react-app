@@ -23,7 +23,7 @@ const NewWallet = () => {
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center">
                 <button className="continue p-3 w-75">
-                    <Link className="link" to={'/create/password'}>Continue</Link>
+                    <Link className="link" to={'/home'}>Continue</Link>
                 </button>
             </div>
         </div>

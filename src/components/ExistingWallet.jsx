@@ -10,7 +10,7 @@ const ExistingWallet = () => {
     let secretSuccess = () => {
         main(secret)
             .then(() => {
-                navigate('/create/password');
+                navigate('/home');
             })
             .catch((err)=>{
                 console.log(err)

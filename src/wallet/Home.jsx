@@ -1,35 +1,12 @@
-import { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const ethers = require('ethers');  
-    const INFURA_ID = "adf6643bca5440f0883330e066d2e79c"
-    const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
-    const address = "0xA5c19B7ACb92e8b932289a671ed256bF22e57bec"
-    const addressFront = address.slice(0,4)
-    const addressBack = address.slice(39, 42)
-    const addressShort = addressFront + "..." + addressBack
-    
-    const [balance, setBalance] = useState(null);
-
-    useEffect(() => {
-        const getBalance = async () => {
-            try {
-                const balance = await provider.getBalance(address);
-                setBalance(Math.round(ethers.utils.formatEther(balance)*1000000)/1000000);
-            } catch (err) {
-                console.error(err);
-            }
-        }
-        
-        getBalance();
-    }, []);
-
         return (
             <div>
                 <div className="row mt-5">
-                    <h6>{addressShort}</h6>
-                    <h1>${Math.round((balance*1360.78)*100)/100}</h1>
+                    <h6>0x...a540e22</h6>
+                    <h1>$94.37</h1>
                 </div>
                 <div className="row w-75 mt-5">
                     <div className="col d-flex justify-content-center">
@@ -74,7 +51,7 @@ const Home = () => {
                     </div>
                     <div className="col">
                         <div className="row">
-                            <p className="m-0">ETHEREUM</p>
+                            <p className="m-0">SHIBA INU</p>
                         </div>
                         <div className="row">
                             <p className="m-0 gray">Your balance</p>
@@ -82,10 +59,10 @@ const Home = () => {
                     </div>
                     <div className="col d-flex flex-column">
                         <div className="row align-self-end">
-                            <h5 className="m-0 align-self-end">${Math.round((balance*1360.78)*100)/100}</h5>
+                            <h5 className="m-0 align-self-end">$94.37</h5>
                         </div>
                         <div className="row align-self-end">
-                            <p className="gray m-0">{balance} ETH</p>
+                            <p className="gray m-0">7,700,361.729 SHIB</p>
                         </div>
                     </div>
                 </div>

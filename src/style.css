@@ -5,7 +5,7 @@
 .contain {
     margin: 0 auto;
     max-width: 500px;
-    min-height: 900px;
+    height: 900px;
     color: white;
     background-color: rgb(28, 27, 27);
     border: 1px solid white;
@@ -96,5 +96,9 @@
 
 a:hover {
     color: black;
+}
+
+.subtext {
+    color:#6c6c6c;
 }
 

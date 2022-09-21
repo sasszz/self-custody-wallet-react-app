@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const LogOut = () => {
     return (
         <div>
-            <div class="col-1">
-                <Link className="link" to={'/home'}><img class="icon2" src="./public/assets/back-arrow.png" alt="Back Arrow" /></Link>
+            <div className="col-1">
+                <Link className="link icon2" to={'/home'}><img src="./public/assets/back-arrow.png" alt="Back Arrow" /></Link>
             </div>
             <div>
                 <h2>Are you sure?</h2>

@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
     return (
         <div>
-            <div>
-                <h1>Coinbase Wallet</h1>
-                <h3>Extension</h3>
-                <p>To get started, create a new wallet or use one you already have.</p>
+            <div className="mt-5">
+                <h2>Coinbase Wallet</h2>
+                <p className="w-75">To get started, create a new wallet or use one you already have.</p>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center mt-5">
                 <button className="new p-3 w-75">

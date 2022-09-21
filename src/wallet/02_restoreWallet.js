@@ -6,14 +6,16 @@ const { keccak256 } = require("ethereum-cryptography/keccak");
 const { bytesToHex } = require("ethereum-cryptography/utils");
 // const { writeFileSync } = require("fs");
 
-async function main(_mnemonic) {
+let walletAddress = ""
+
+async function restoreWallet(_mnemonic) {
   try {
     const entropy = mnemonicToEntropy(_mnemonic, wordlist);
     const hdRootKey = HDKey.fromMasterSeed(entropy);
     const privateKey = hdRootKey.deriveChild(0).privateKey;
     const publicKey = getPublicKey(privateKey);
     const address = keccak256(publicKey).slice(-20);
-    console.log(`Account One Wallet Address: 0x${bytesToHex(address)}`);
+    walletAddress = `0x${bytesToHex(address)}`
   } catch (error) {
       throw new Error(error)
   }
@@ -35,4 +37,4 @@ async function main(_mnemonic) {
 //     process.exit(1);
 //   });
 
-export default main 
+export { restoreWallet, walletAddress }

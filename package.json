@@ -17,6 +17,12 @@
     "web-vitals": "^2.1.4",
     "web3": "^1.8.0"
   },
+	"peerDependencies": {
+		"react": "^16.x",
+		"react-dom": "^16.x",
+		"styled-components": "^5.x",
+		"react-spring": "^8.x"
+	},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { restoreWallet, walletAddress } from '../wallet/02_restoreWallet'
 import axios from 'axios';
+import anime from 'animejs';
+import BackArrow from '../assets/back-arrow.png'
+
 
 const ExistingWallet = () => {
     const [secret, setSecret] = useState("");
@@ -34,7 +37,6 @@ const ExistingWallet = () => {
             })
     }
 
-
     let secretSuccess = () => {
         restoreWallet(secret)
             .then(() => {
@@ -46,24 +48,60 @@ const ExistingWallet = () => {
             })
     }
 
+    useEffect(() => {
+        animation()
+    }, []);
+
+    const animation = () => {
+        anime({
+            targets: ".load",
+            opacity: {
+                delay: 200,
+                value: [0, 1]
+            },
+            translateY: {
+                value: [10, 0]
+            },
+            easing: 'cubicBezier(.5, .05, .1, .3)',
+            duration: 1000
+            
+        })
+    }
+
+    const animateButton = (el, scale) => {
+        anime({
+            targets: el,
+            scale: scale,
+            duration: 800,
+            elasticity: 400
+        });
+    }
+
+    const animateButtonLeave = (el, scale) => {
+        anime({
+            targets: el,
+            scale: 1,
+            duration: 600,
+            elasticity: 300
+        });
+    }
 
     return (
-        <div>
+        <div className="load">
             <div className="col-1">
-                <Link className="link icon2" to={'/'}><img src="./public/assets/back-arrow.png" alt="Back Arrow" /></Link>
-            </div>
-            <div className="mt-1">
+                    <Link className="link" to={'/'}>
+                        <button className="numpad back" onMouseEnter={() => animateButton(".back", 1.2)} onMouseLeave={() => animateButtonLeave(".back", 1.2)}><img className="icon2" src={BackArrow} alt="Back Arrow" /></button>
+                    </Link>
+                </div>
+            <div className="mt-5">
                 <h2>Import wallet</h2>
                 <p className="w-75 subtext">Enter your wallet’s 12 word recovery phrase (also called a seed phrase). You can import any Ethereum wallet.</p>
             </div>
             <form onSubmit={onSubmitHandler}>
                 <div className="row mt-3">
-                    <input onBlur={() => secretSuccess()} className="form-control" value={secret} onChange={(e) => setSecret(e.target.value)} type="text" name="secret" />
-                    <Link className="mt-2" to={'https://www.coinbase.com/wallet/getting-started-extension#import-existing-wallet'}>Where can I find it?</Link>
+                        <input onBlur={() => secretSuccess()} className="form-control input" value={secret} onChange={(e) => setSecret(e.target.value)} type="text" name="secret" />
+                    <a className="mt-2" href={'https://www.coinbase.com/wallet/getting-started-extension#import-existing-wallet'}>Where can I find it?</a>
                 </div>
-                {incorrectSecret &&
-                    <p>{incorrectSecret}</p>
-                }
                 <div className="mt-5">
                     <h2>Create password</h2>
                     <p className="w-75 subtext">Set a password to unlock your wallet each time you use your computer. It can't be used to recover your wallet.</p>
@@ -92,12 +130,15 @@ const ExistingWallet = () => {
                     />
                 </div>
                 <div className="d-flex flex-column justify-content-center align-items-center mt-3">
-                    <button className="continue p-3 w-75 mt-3" type="submit">Submit</button>
+                    <button onMouseEnter={() => animateButton(".continue", 1.1)} onMouseLeave={() => animateButtonLeave(".continue", 1.1)} className="continue p-3 w-75 mt-3" type="submit">Submit</button>
                 </div>
             </form>
+            {incorrectSecret &&
+                    <p className="text-center mt-3">{incorrectSecret}</p>
+            }
             {errors &&
                 errors.map((error, idx) => {
-                    return <p key={idx}>{error}</p>;
+                    return <p className="text-center mt-3" key={idx}>{error}</p>;
                 })}
         </div>
     )

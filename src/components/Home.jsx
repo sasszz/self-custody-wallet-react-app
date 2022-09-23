@@ -36,7 +36,7 @@ const Home = () => {
         anime({
             targets: ".load",
             opacity: {
-                delay: 200,
+                delay: 500,
                 value: [0, 1]
             },
             translateY: {

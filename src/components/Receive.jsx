@@ -70,7 +70,7 @@ const Receive = () => {
                 <Qr value={address} />
             </div>
             <div className="load">
-                <div className="row mt-2">
+                <div className="row mt-1">
                     <div className="col d-flex justify-content-center">
                         <h6 className="gray mt-5">Your Ethereum address</h6>
                     </div>

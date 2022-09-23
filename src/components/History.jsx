@@ -35,7 +35,7 @@ const History = () => {
         anime({
             targets: ".load",
             opacity: {
-                delay: 200,
+                delay: 400,
                 value: [0, 1]
             },
             translateY: {

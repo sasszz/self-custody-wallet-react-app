@@ -122,8 +122,6 @@ const NewWallet = () => {
                 <div className="d-flex flex-column justify-content-center align-items-center mt-2">
                     <Link to={'/create/password'} className="row d-flex justify-content-center align-items-center w-75 link2">
                         <button
-                            // id="continue"
-                            // onClick={()=>animateClick("#continue")}
                             onMouseEnter={() => animateButton(".continue", 1.1)} onMouseLeave={() => animateButtonLeave(".continue", 1.1)}
                             className={check ? "continue p-3" : "opacity continue p-3"}
                             disabled={check ? false : true}

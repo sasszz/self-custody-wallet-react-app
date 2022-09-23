@@ -6,7 +6,7 @@ import anime from 'animejs';
 import BackArrow from '../assets/back-arrow.png'
 
 
-const ExistingWallet = () => {
+const CreatePassword = () => {
     const [secret, setSecret] = useState("");
     const navigate = useNavigate();
     const [incorrectSecret, setIncorrectSecret] = useState(null);
@@ -34,17 +34,6 @@ const ExistingWallet = () => {
                     errorArr.push(errorResponse[key].message)
                 }
                 setErrors(errorArr);
-            })
-    }
-
-    let secretSuccess = () => {
-        restoreWallet(secret)
-            .then(() => {
-                setIncorrectSecret(null)
-                setAddress(walletAddress)
-            })
-            .catch((err) => {
-                setIncorrectSecret(err.message)
             })
     }
 
@@ -93,15 +82,13 @@ const ExistingWallet = () => {
                         <button className="numpad back" onMouseEnter={() => animateButton(".back", 1.2)} onMouseLeave={() => animateButtonLeave(".back", 1.2)}><img className="icon2" src={BackArrow} alt="Back Arrow" /></button>
                     </Link>
                 </div>
-            <div className="mt-5">
-                <h2>Import wallet</h2>
-                <p className="w-75 subtext">Enter your wallet’s 12 word recovery phrase (also called a seed phrase). You can import any Ethereum wallet.</p>
-            </div>
             <form onSubmit={onSubmitHandler}>
-                <div className="row mt-3">
-                        <input onBlur={() => secretSuccess()} className="form-control input" value={secret} onChange={(e) => setSecret(e.target.value)} type="text" name="secret" />
-                    <a className="mt-2" href={'https://www.coinbase.com/wallet/getting-started-extension#import-existing-wallet'}>Where can I find it?</a>
-                </div>
+                <input type="hidden" name="secret" 
+                    value={secret}
+                />
+                <input type="hidden" name="address" 
+                    value={address}
+                />
                 <div className="mt-5">
                     <h2>Create password</h2>
                     <p className="w-75 subtext">Set a password to unlock your wallet each time you use your computer. It can't be used to recover your wallet.</p>
@@ -130,9 +117,10 @@ const ExistingWallet = () => {
                     />
                 </div>
                 <div className="d-flex flex-column justify-content-center align-items-center mt-3">
-                    <button onMouseEnter={() => animateButton(".continue", 1.1)} onMouseLeave={() => animateButtonLeave(".continue", 1.1)} type="submit"
-                        className={(secret === "") ? "opacity continue p-3 w-75 mt-3" : (password === "") ? "opacity continue p-3 w-75 mt-3" : (confirmPassword === "") ? "opacity continue p-3 w-75 mt-3" : "continue p-3 w-75 mt-3"}
-                        disabled={(secret === "") ? "opacity continue p-3 w-75 mt-3" : (password === "") ? true : (confirmPassword === "") ? true : false}
+                    <button 
+                        onMouseEnter={() => animateButton(".continue", 1.1)} onMouseLeave={() => animateButtonLeave(".continue", 1.1)} type="submit"
+                        className={(password === "") ? "opacity continue p-3 w-75 mt-3" : (confirmPassword === "") ? "opacity continue p-3 w-75 mt-3" : "continue p-3 w-75 mt-3"}
+                        disabled={(password === "") ? true : (confirmPassword === "") ? true : false}
                     >
                         Submit
                     </button>
@@ -149,5 +137,5 @@ const ExistingWallet = () => {
     )
 }
 
-export default ExistingWallet
+export default CreatePassword
 

@@ -2,6 +2,9 @@ import BackArrow from '../assets/back-arrow.png'
 import anime from 'animejs';
 import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react'
+import Construction from '../assets/construction.png'
+import Construction2 from '../assets/construction2.png'
+import Construction3 from '../assets/construction3.png'
 
 const ConfirmSend = () => {
     useEffect(() => {
@@ -62,6 +65,11 @@ const ConfirmSend = () => {
                     <div className="col d-flex flex-column justify-content-center align-items-center">
                         <h3 className="gray">Oops!</h3>
                         <p>We're working on it</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col d-flex flex-column justify-content-center align-items-center">
+                        <img className="opacity" src={Construction3} alt="Under Construction" />
                     </div>
                 </div>
             </div>

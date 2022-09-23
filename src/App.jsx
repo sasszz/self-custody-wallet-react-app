@@ -11,6 +11,8 @@ import ExistingWallet from './components/ExistingWallet';
 import LogOut from './components/LogOut';
 import anime from 'animejs';
 import ConfirmSend from './components/ConfirmSend'
+import CreatePassword from './components/CreatePassword'
+
 
 
 import './style.css'
@@ -34,6 +36,7 @@ const App = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/existing/wallet" element={<ExistingWallet />}/>
             <Route path="/new/wallet" element={<NewWallet />}/>
+            <Route path="/create/password" element={<CreatePassword />}/>
             <Route path="/home" element={<Home />} />
             <Route path="/receive" element={<Receive />} />
             <Route path="/send" element={<Send />} />

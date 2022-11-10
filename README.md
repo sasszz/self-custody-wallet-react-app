@@ -12,9 +12,9 @@ Inspired by the design of Coinbase Wallet. This self-custody wallet will be conn
 - [x] Convert to React app front-end
 - [x] Build numpad functionality
   - See Numpad demo below with side-by-side of Coinbase Wallet
-- [ ] Build out backend and database
-- [ ] Connect to a Smart Contract
-- [ ] Deployment
+- [x] Mneumonic Validator for wallet address and secret key
+- [x] QR code generator for wallet address so user can receive cryptocurrency transactions
+- [x] Integrated Etherscan API to populate history of transactions
 
 ### React App Front-End Demo
 
